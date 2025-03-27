@@ -15,7 +15,8 @@
     "bootstrap": "^5.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "tui-grid": "^4.21.22",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -41,5 +42,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "side project",
+  "main": "index.js",
+  "repository": "https://github.com/HIMMEL95/Side_project.git",
+  "author": "skylee",
+  "license": "MIT"
 }
