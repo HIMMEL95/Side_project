@@ -1,0 +1,36 @@
+.container-fluid {
+    justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: contents !important;
+        flex-basis: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .navWapper {
+
+    }
+
+    ul.nav {
+        gap: 0px;
+    }
+}
+
+.nav-underline .nav-link {
+    width: max-content;
+}
+
+.fa-circle-user {
+    width: 20px;
+    height: 20px;
+    margin: 5px 0;
+    vertical-align: middle;
+}
+
+.collapse {
+    position: absolute;
+    right: 20px;
+}
