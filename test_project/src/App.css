@@ -1,0 +1,18 @@
+* {
+  height: 100%;
+}
+
+.btnCss {
+  background-color: #FFFFFF;
+  border: 1px solid #999;
+  border-radius: 5px;
+  color: #000;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.badge-hidden {
+  display: none !important;
+}
