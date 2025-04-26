@@ -5,7 +5,7 @@ const MainHeader = () => {
   return (
     <nav className="navbar bg-primary" data-bs-theme="dark">
       <div className="container-fluid">
-        <a className="navbar-brand">Financial Ledger</a>
+        <a className="navbar-brand" href="/">Financial Ledger</a>
         <form className="d-flex" role="search">
           <input
             className="form-control me-2"

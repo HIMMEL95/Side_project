@@ -1,0 +1,41 @@
+.toastui-calendar-see-more-popup-slot:empty,
+.toastui-calendar-event-form-popup-slot:empty,
+.toastui-calendar-event-detail-popup-slot:empty {
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    display: none !important;
+}
+
+.toastui-calendar-floating-layer {
+    display: none;
+}
+
+.calendarHeader {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.calendarNavbar {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+    padding: 6px;
+}
+
+.calBtn {
+    background-color: #FFFFFF;
+    width: max-content;
+    border-radius: 10px;
+    padding: 0 10px;
+    line-height: 33px;
+    height: 38px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.dateRange {
+    line-height: 35px;
+}
