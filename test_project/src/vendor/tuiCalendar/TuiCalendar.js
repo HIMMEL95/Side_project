@@ -1,12 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
-import $ from "jquery";
 import Calendar from "@toast-ui/react-calendar";
 import "@toast-ui/calendar/dist/toastui-calendar.min.css";
 import "./TuiCalendar.css";
+import "react-datepicker/dist/react-datepicker.css";
+import ReactDatepicker from "../react-datepicker/ReactDatepicker";
 
 const TuiCalender = (props) => {
   const calendarRef = useRef();
   const [date, setDate] = useState("");
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const dateChangeHandler = (event) => {
     let calendarInstance = calendarRef.current.getInstance();
@@ -48,10 +50,26 @@ const TuiCalender = (props) => {
     setDate(date);
   };
 
+  const datePickerChangeHandler = (date) => {
+    let calendarInstance = calendarRef.current.getInstance();
+    calendarInstance.setDate(date);
+    console.log(date);
+    setSelectedDate(date);
+  };
+
   // 컴포넌트가 처음 렌더링 될 때 자동 실행 시키는 방법
   useEffect(() => {
     todayHandler();
   }, []); // 빈 배열은 최초 1회만 실행됨
+
+  const options = {
+    dateFormat: "yyyy-MM-dd", // 날짜 형태
+    minDate : new Date('2000-01-01'), // 선택 가능 최소 날짜
+    selected : selectedDate,
+    className : 'datePicker',
+    height: '100px',
+    onChange : datePickerChangeHandler
+  };
 
   return (
     <>
@@ -74,9 +92,20 @@ const TuiCalender = (props) => {
               style={{ fontSize: "20px" }}
             ></i>
           </div>
-          <span id={`${props.id}Range`} className="dateRange">
+          <ReactDatepicker options={options} />
+          {/* <DatePicker
+            dateFormat="yyyy.MM.dd" // 날짜 형태
+            shouldCloseOnSelect // 날짜를 선택하면 datepicker가 자동으로 닫힘
+            minDate={new Date("2000-01-01")} // minDate 이전 날짜 선택 불가
+            selected={selectedDate}
+            className="datePicker"
+            height={"100px"}
+            onChange={datePickerChangeHandler}
+            // onChange={(date) => setSelectedDate(date)}
+          /> */}
+          {/* <span id={`${props.id}Range`} className="dateRange">
             {date}
-          </span>
+          </span> */}
           <div
             id="nextBtn"
             className="calBtn is-rounded next btn btn-light"

@@ -4,6 +4,7 @@
 }
 
 .MainContentLayout {
+    height: 100%;
     display: grid;
     grid-template-columns: auto 30%;
     grid-gap: 15px;
