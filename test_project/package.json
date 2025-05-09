@@ -21,9 +21,11 @@
     "react-bootstrap": "^2.10.9",
     "react-dom": "18.2.0",
     "react-scripts": "5.0.1",
+    "tui-calendar": "^1.15.3",
     "tui-date-picker": "^4.3.3",
     "tui-grid": "^4.21.22",
     "tui-pagination": "^3.4.1",
+    "tui-time-picker": "^2.1.6",
     "tui-tree": "^4.0.9",
     "web-vitals": "^2.1.0"
   },
