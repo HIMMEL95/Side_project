@@ -1,11 +1,29 @@
 import React from "react";
 import "./MainContent.css";
 import TuiCalender from "../../vendor/tuiCalendar/TuiCalendar";
+import ReactTabs from "../../vendor/react-tabs/ReactTabs";
+import { useRef } from "react";
 
 const MainContent = () => {
-  const options = {
+  const vendorRef = useRef();
+  console.log(vendorRef);
+
+  const calendarOptions = {
     defaultView: "month",
-    gridSelection: false,
+    gridSelection: true,
+    // calendars: MOCK_CALENDARS,
+    useFormPopup: true,
+    useDetailPopup: true,
+    options: {
+      month: {
+        visibleEventCount: 4,
+      },
+    },
+    theme: {
+      common: {
+        backgroundColor: "#FFFFFA",
+      },
+    },
     timeZone: {
       zones: [
         {
@@ -49,14 +67,37 @@ const MainContent = () => {
     ],
   };
 
+  const tabOptions = {
+    id: "calendarTabs",
+    className: "calendarTabs",
+    defaultActiveKey: "calendar",
+    tabList: [
+      {
+        id: "1",
+        eventKey: "calendar",
+        title: "calendar",
+        disabled: false,
+        children: (
+          <div className="MainContentLayout">
+            <div id="calendarWrapper">
+              <TuiCalender
+                ref={vendorRef}
+                id="financialCalendar"
+                options={calendarOptions}
+              />
+            </div>
+            <div id="gridWrapper"></div>
+          </div>
+        ),
+      },
+      { id: "2", eventKey: "chart", title: "chart", disabled: false },
+      { id: "3", eventKey: "list", title: "list", disabled: true },
+    ],
+  };
+
   return (
     <div className="MainContentWrapper">
-      <div className="MainContentLayout">
-        <div id="calendarWrapper">
-          <TuiCalender id="financialCalendar" options={options} />
-        </div>
-        <div id="gridWrapper"></div>
-      </div>
+      <ReactTabs options={tabOptions} />
     </div>
   );
 };

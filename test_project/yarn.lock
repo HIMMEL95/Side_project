@@ -4240,7 +4240,7 @@ domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.3.1:
   dependencies:
     domelementtype "^2.2.0"
 
-dompurify@^2.3.3, dompurify@^2.3.8, dompurify@^2.3.9:
+dompurify@^2.3.1, dompurify@^2.3.3, dompurify@^2.3.8, dompurify@^2.3.9:
   version "2.5.8"
   resolved "https://registry.npmjs.org/dompurify/-/dompurify-2.5.8.tgz"
   integrity sha512-o1vSNgrmYMQObbSSvF/1brBYEQPHhV1+gsmrusO7/GXtp1T9rCS8cXFqVxK/9crT1jA6Ccv+5MTSjBNqr7Sovw==
@@ -9813,12 +9813,27 @@ tsutils@^3.21.0:
   dependencies:
     tslib "^1.8.1"
 
+tui-calendar@^1.15.3:
+  version "1.15.3"
+  resolved "https://registry.yarnpkg.com/tui-calendar/-/tui-calendar-1.15.3.tgz#99c9809c3575ac55ecf2b5bd5c119e8a6fcd5481"
+  integrity sha512-S+QxtSPunLUNIX/eHoHcBB9XlPVT15Wh6ItR62n5K/Gq3WeSQdyhdbsuZJYV9z75bgJbFzp6x32v2yEPm6iWrg==
+  dependencies:
+    dompurify "^2.3.1"
+    tui-code-snippet "^1.5.0"
+    tui-date-picker "^4.3.0"
+    tui-time-picker "^2.1.4"
+
+tui-code-snippet@^1.5.0:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/tui-code-snippet/-/tui-code-snippet-1.5.2.tgz#f4b8f0f1ac996b0b5b621f77c9507af19a0de238"
+  integrity sha512-6UqTlQaaC1KLcmC0HAoq5dtl1G4Fib+R+NC7pmaV7kiIlZ7JqKhUmnOoGRcreAyzd81UTK/vCvhrw9QJskpCFQ==
+
 tui-context-menu@^2.1.9:
   version "2.1.9"
   resolved "https://registry.npmjs.org/tui-context-menu/-/tui-context-menu-2.1.9.tgz"
   integrity sha512-JQTkKENmtn4raY1XdOe6YjduB6/Dyd2QrC2cTOPr/H5K4HEahxF3rpJonUfnjokcjm/nMxz69tHCsN1tPw+2pw==
 
-tui-date-picker@^4.0.1, tui-date-picker@^4.1.0, tui-date-picker@^4.3.3:
+tui-date-picker@^4.0.1, tui-date-picker@^4.1.0, tui-date-picker@^4.3.0, tui-date-picker@^4.3.3:
   version "4.3.3"
   resolved "https://registry.npmjs.org/tui-date-picker/-/tui-date-picker-4.3.3.tgz"
   integrity sha512-/2YoLnj5c1e+Ag1ZZYOgzEs2o0v7Ol7c5UAnBj438zGlkwkMxyH0HwP2pVqqIYX05WE7K0+6nTWVMybS8otBgw==
@@ -9840,7 +9855,7 @@ tui-pagination@^3.4.0, tui-pagination@^3.4.1:
   resolved "https://registry.npmjs.org/tui-pagination/-/tui-pagination-3.4.1.tgz"
   integrity sha512-W09L0wPMSFstthBhQjcLNDnN1yuCEDn/tIXmaKdTpNFYa11eNrNo/rOwXzrugXvP2arZ60KmVhkFzoAOEuV0Sg==
 
-tui-time-picker@^2.0.1, tui-time-picker@^2.1.6:
+tui-time-picker@^2.0.1, tui-time-picker@^2.1.4, tui-time-picker@^2.1.6:
   version "2.1.6"
   resolved "https://registry.npmjs.org/tui-time-picker/-/tui-time-picker-2.1.6.tgz"
   integrity sha512-4Jmo3wjGS+Ii4/qQgt5DaFEohHpB3U6BzWeTODVVFHD9sx3NOsbomY9K0xMobSLODi+tQEH7wfOtNU0IJmcQ6Q==
